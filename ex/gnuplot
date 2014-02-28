@@ -1,0 +1,1 @@
+gnuplot -p -e 'set pointsize 2.0; plot fit.data with points pt 29, 3.331184*x + 0.069174 with lines'

@@ -1,0 +1,76 @@
+// output of ./demo/comb/stringsubst-demo.cc:
+// Description:
+//% String substitution engine (Lindenmayer system, or L-system).
+
+arg 1: 7 == maxn  [Max depth]  default=7
+arg 2: "A" == start  [Start symbol(s)]  default="A"
+args 3,4,... : [Rules:  sym1 rep1  sym2 rep2  [... symN repN]]
+Example: ./bin 7 A  A x  x xA
+
+------------- rabbit sequence: -------------
+Number of symbols = 2
+Start: 0
+Rules:
+  0 --> 1
+  1 --> 10
+-------------
+0:   (#=1)
+  0
+1:   (#=1)
+  1
+2:   (#=2)
+  10
+3:   (#=3)
+  101
+4:   (#=5)
+  10110
+5:   (#=8)
+  10110101
+6:   (#=13)
+  1011010110110
+7:   (#=21)
+  101101011011010110101
+
+------------- Thue-Morse sequence: -------------
+Number of symbols = 2
+Start: 0
+Rules:
+  0 --> 01
+  1 --> 10
+-------------
+0:   (#=1)
+  0
+1:   (#=2)
+  01
+2:   (#=4)
+  0110
+3:   (#=8)
+  01101001
+4:   (#=16)
+  0110100110010110
+5:   (#=32)
+  01101001100101101001011001101001
+6:   (#=64)
+  0110100110010110100101100110100110010110011010010110100110010110
+
+------------- Dragon curve (90deg turns): -------------
+Number of symbols = 4
+Start: F
+Rules:
+  F --> F+G+
+  G --> -F-G
+  + --> +
+  - --> -
+-------------
+0:   (#=1)
+  F
+1:   (#=4)
+  F+G+
+2:   (#=10)
+  F+G++-F-G+
+3:   (#=22)
+  F+G++-F-G++-F+G+--F-G+
+4:   (#=46)
+  F+G++-F-G++-F+G+--F-G++-F+G++-F-G+--F+G+--F-G+
+5:   (#=94)
+  F+G++-F-G++-F+G+--F-G++-F+G++-F-G+--F+G+--F-G++-F+G++-F-G++-F+G+--F-G+--F+G++-F-G+--F+G+--F-G+

@@ -1,0 +1,20 @@
+insgesamt 89
+drwxr-xr-x  2 wbooze wbooze 1024 Jul 18 16:38 [0m[01;34m.[0m
+drwxr-xr-x 10 wbooze root   3072 Jun 23 18:37 [01;34m..[0m
+-rwxr-xr-x  1 wbooze wbooze 8754 Jul 18 16:38 [01;32mcopy-system[0m
+-rw-r--r--  1 wbooze wbooze  277 Jul 18 16:37 [00mcopy-system.c[0m
+-rw-r--r--  1 wbooze wbooze    0 Jul 18 16:38 [00mfile.in[0m
+-rwxr-xr-x  1 wbooze wbooze 8442 Mai 20 14:04 [01;32mfork[0m
+-rw-r--r--  1 wbooze wbooze  455 Mai 20 14:04 [00mfork.c[0m
+-rwxr-xr-x  1 wbooze wbooze 9747 Mai 20 16:14 [01;32msigchld[0m
+-rw-r--r--  1 wbooze wbooze 1840 Mai 20 16:14 [00msigchld.c[0m
+-rwxr-xr-x  1 wbooze wbooze 8794 Mai 20 14:39 [01;32mspawn[0m
+-rwxr-xr-x  1 wbooze wbooze 9367 Jun  7 19:33 [01;32mspawn-with-wait[0m
+-rw-r--r--  1 wbooze wbooze 1547 Jun  7 19:33 [00mspawn-with-wait.c[0m
+-rw-r--r--  1 wbooze wbooze 1212 Mai 20 14:39 [00mspawn.c[0m
+-rwxr-xr-x  1 wbooze wbooze 8365 Mai 20 16:36 [01;32mthread-create[0m
+-rw-r--r--  1 wbooze wbooze  480 Mai 20 16:35 [00mthread-create.c[0m
+-rwxr-xr-x  1 wbooze wbooze 8610 Mai 20 16:51 [01;32mthread-create2[0m
+-rw-r--r--  1 wbooze wbooze 1319 Mai 20 16:51 [00mthread-create2.c[0m
+-rwxr-xr-x  1 wbooze wbooze 8169 Jun  7 19:35 [01;32mzombie[0m
+-rw-r--r--  1 wbooze wbooze  351 Jun  7 19:34 [00mzombie.c[0m

@@ -1,0 +1,38 @@
+These directories contain the source to "The X Window System:
+Programming and Applications with Xt, Second Motif Edition", by
+Douglas Young, Prentice Hall, 1994, All programs are written in ANSI C
+and designed for Motif 1.2. The makefiles are minimal and may need to
+be modified to work in various environments.
+
+Appdefaults files needed to mkae various programs work correctly can
+be found in the AppDefaults directory.
+
+Bitmaps for some examples can be ound in the Bitmaps directory.
+
+Makefiles have not been tested in all environments, and are
+deliberately kept simple to allow you to modify them as needed to
+build on your machine. Basically, almost any single-file example can
+be built with:
+
+cc -o prog prog.c -lXm -lXt -lX11
+
+Depending on your system, you may need other libraries, or other
+flags.
+
+
+To order the book, call:
+
+Prentice Hall order line 201-767-5937
+
+The X Window System: Programming and Applications with Xt, Motif,
+Second Edition.
+
+ISBN 0-13-123803-5
+
+
+
+
+
+
+
+

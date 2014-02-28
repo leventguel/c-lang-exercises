@@ -1,0 +1,55 @@
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ ! Fractal: Application resources for fractal program
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ 
+ ! Set labels for menu items
+ *Preferences.labelString: Preferences...
+
+ ! Set labels, ranges, and default values for all preference controls
+ *autoUnmanage:                  False
+*preferences.dialogTitle:       Fractal Parameters
+*preferences.okLabelString:     Apply
+*preferences.cancelLabelString: Dismiss
+
+! All scales should be horizontal and show the numeric value
+*preferences*XmScale.orientation: horizontal
+*preferences*XmScale.showValue:   True
+
+! Ranges, default values, and labels for individual controls
+*preferences*depth.titleString:         Maximum Iterations
+*preferences*depth.minimum:             1
+*preferences*depth.maximum:          1000
+*preferences*depth.decimalPoints:       0
+*preferences*depth.value:             200
+
+*preferences*range.titleString:       Range
+*preferences*range.minimum:           1
+*preferences*range.maximum:       10000
+*preferences*range.decimalPoints:     3
+*preferences*range.value:          2000
+
+*preferences*distance.titleString:     Escape Distance
+*preferences*distance.minimum:         1
+*preferences*distance.maximum:        10
+*preferences*distance.decimalPoints:   0
+*preferences*distance.value:           4
+
+*preferences*realOrigin.titleString:       Real Origin
+*preferences*realOrigin.minimum:       -3000
+*preferences*realOrigin.maximum:        300
+*preferences*realOrigin.decimalPoints:    3
+*preferences*realOrigin.value:        -1400
+
+*preferences*imagOrigin.titleString:      Imaginary Origin
+*preferences*imagOrigin.minimum:      -1000
+*preferences*imagOrigin.maximum:       3000
+*preferences*imagOrigin.decimalPoints:    3
+*preferences*imagOrigin.value:         1000
+
+*preferences*numColors.titleString:   Number of Colors
+*preferences*numColors.minimum:       1
+*preferences*numColors.maximum:     256
+
+*preferences*colorMap.labelString:   Use Color Ramp
+*preferences*colorStyle*labelString: Color By Distance
+                                

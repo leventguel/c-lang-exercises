@@ -1,0 +1,11 @@
+Some programs in this directory use the Xpm library. This is a freely
+available library, but is not part of the standard X11 distribution.
+You can get it from ftp.x.org under the ~ftp/contrib directory.
+
+These programs expect that you have xpm.h installed under an X11
+directory on your include search path, typically /usr/include, and
+have libxpm.a somewhere on your library search path, typically
+/usr/lib.
+
+
+

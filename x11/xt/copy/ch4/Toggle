@@ -1,0 +1,10 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! Resources required to use bitmap images instead of
+!! indicators to indicate toggle state.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*XmToggleButton*indicatorOn:    FALSE
+*XmToggleButton*labelType:      pixmap
+*XmToggleButton*labelPixmap:    thumbs_down
+*XmToggleButton*selectPixmap:   thumbs_up
+
+

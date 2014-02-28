@@ -1,0 +1,278 @@
+# 1 "Imakefile.c"
+# 1 "<eingebaut>"
+# 1 "<Kommandozeile>"
+# 1 "Imakefile.c"
+
+# 35 "Imakefile.c"
+# 1 "/usr/lib64/X11/config/Imake.tmpl" 1
+XCOMM ----------------------------------------------------------------------
+XCOMM Makefile generated from "Imake.tmpl" and <Imakefile>
+XCOMM $Xorg: Imake.tmpl,v 1.4 2000/08/17 19:41:46 cpqbld Exp $
+XCOMM $XdotOrg: xc/config/cf/Imake.tmpl,v 1.9 2005/01/24 06:37:31 daniels Exp $
+XCOMM
+XCOMM
+XCOMM
+XCOMM
+XCOMM $XFree86: xc/config/cf/Imake.tmpl,v 3.155 2003/12/24 18:58:41 dickey Exp $
+XCOMM ----------------------------------------------------------------------
+
+
+
+
+
+
+# 25 "/usr/lib64/X11/config/Imake.tmpl"
+
+
+
+
+
+
+
+all::
+
+.SUFFIXES: .i
+
+
+
+
+
+
+# 1 "/usr/lib64/X11/config/Imake.cf" 1
+XCOMM $XdotOrg: xc/config/cf/Imake.cf,v 1.7 2005/03/02 11:20:29 gisburn Exp $
+XCOMM $Xorg: Imake.cf,v 1.4 2000/08/17 19:41:45 cpqbld Exp $
+
+# 21 "/usr/lib64/X11/config/Imake.cf"
+XCOMM $XFree86: xc/config/cf/Imake.cf,v 3.88 2003/12/16 21:30:21 herrb Exp $
+
+# 41 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+
+
+# 62 "/usr/lib64/X11/config/Imake.cf"
+
+# 78 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+
+
+
+# 115 "/usr/lib64/X11/config/Imake.cf"
+
+# 201 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+# 254 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+# 286 "/usr/lib64/X11/config/Imake.cf"
+
+# 321 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+# 349 "/usr/lib64/X11/config/Imake.cf"
+
+# 383 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+
+
+# 427 "/usr/lib64/X11/config/Imake.cf"
+
+# 461 "/usr/lib64/X11/config/Imake.cf"
+
+# 472 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+
+
+# 505 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 537 "/usr/lib64/X11/config/Imake.cf"
+
+# 555 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+
+
+# 591 "/usr/lib64/X11/config/Imake.cf"
+
+# 605 "/usr/lib64/X11/config/Imake.cf"
+
+# 617 "/usr/lib64/X11/config/Imake.cf"
+
+# 629 "/usr/lib64/X11/config/Imake.cf"
+
+# 644 "/usr/lib64/X11/config/Imake.cf"
+
+# 679 "/usr/lib64/X11/config/Imake.cf"
+
+
+# 722 "/usr/lib64/X11/config/Imake.cf"
+
+# 731 "/usr/lib64/X11/config/Imake.cf"
+
+# 740 "/usr/lib64/X11/config/Imake.cf"
+
+# 756 "/usr/lib64/X11/config/Imake.cf"
+
+# 765 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+
+# 786 "/usr/lib64/X11/config/Imake.cf"
+
+# 888 "/usr/lib64/X11/config/Imake.cf"
+
+# 1005 "/usr/lib64/X11/config/Imake.cf"
+
+# 1026 "/usr/lib64/X11/config/Imake.cf"
+
+# 1054 "/usr/lib64/X11/config/Imake.cf"
+
+# 1067 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+
+
+
+# 1086 "/usr/lib64/X11/config/Imake.cf"
+
+# 1095 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+
+
+
+
+# 1113 "/usr/lib64/X11/config/Imake.cf"
+
+# 1129 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 1175 "/usr/lib64/X11/config/Imake.cf"
+
+
+
+
+
+
+
+# 41 "/usr/lib64/X11/config/Imake.tmpl" 2
+
+XCOMM -----------------------------------------------------------------------
+XCOMM site-specific configuration parameters that need to come before
+XCOMM the platform-specific parameters - edit site.def to change
+
+
+# 1 "/usr/lib64/X11/config/site.def" 1
+XCOMM site:  $TOG: site.sample /main/r64_final/1 1998/02/05 16:28:49 kaleb $
+
+
+# 24 "/usr/lib64/X11/config/site.def"
+XCOMM site:  $XFree86: xc/config/cf/site.def,v 3.24 2000/06/25 20:17:29 dawes Exp $
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

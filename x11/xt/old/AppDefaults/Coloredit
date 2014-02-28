@@ -1,0 +1,33 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! Coloredit: Resources for the coloredit program
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+*base.geometry:             =400x400
+!
+*colorpanel*numColumns: 16
+*colorpanel*adjustLast: False
+*colorpanel*packing: pack_column
+!
+! Set the location of the digital display
+!
+*display*x:                 180
+*display*y:                  60
+*display*height:             30
+*display*width:             140
+!
+! Position the color controls
+!
+*sliderpanel.x:              10
+*sliderpanel.y:              60
+*sliderpanel*numColumns:      1
+*sliderpanel*packing:        pack_column
+*sliderpanel.orientation:    vertical
+!
+! Specify the valuator orientation and size
+!
+*XmScale*orientation: horizontal
+*XmScale*processingDirection: max_on_bottom
+!
+! Place the quit button.
+*quit*x:                    180
+*quit*y:                    100

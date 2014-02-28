@@ -1,0 +1,18 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ ! Coloredit: Resources for the coloredit program
+ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ ! Labels 
+ *selectorLabel*labelString: Palette
+ *swatchLabel*labelString:   Current Color
+
+! Colors for the color sliders
+coloredit*redSlider*troughColor:   red
+coloredit*blueSlider*troughColor:  blue
+coloredit*greenSlider*troughColor: green
+
+! Message to be displayed if user tries to move the sliders 
+! without selecting a color to edit
+*noColorWarningDialog*messageString: You must select a color \n\
+ from the palette first.
+

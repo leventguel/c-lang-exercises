@@ -1,0 +1,38 @@
+// output of ./demo/bits/bitlex-rec-demo.cc:
+// Description:
+//% Recursive algorithm for the binary words in lexicographic order.
+
+arg 1: 5 == ldn  [Number of bits]  default=5
+arg 2: 0 == fq  [Forward (1) or backward (0) order.]  default=0
+  ....1
+  ...11
+  ...1.
+  ..1.1
+  ..111
+  ..11.
+  ..1..
+  .1..1
+  .1.11
+  .1.1.
+  .11.1
+  .1111
+  .111.
+  .11..
+  .1...
+  1...1
+  1..11
+  1..1.
+  1.1.1
+  1.111
+  1.11.
+  1.1..
+  11..1
+  11.11
+  11.1.
+  111.1
+  11111
+  1111.
+  111..
+  11...
+  1....
+  .....

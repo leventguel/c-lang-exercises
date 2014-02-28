@@ -1,0 +1,400 @@
+
+Errata and remarks for the fxtbook
+("Matters Computational", first edition):
+
+Last change: 2013-March-01 (09:29)
+
+------------------------------------------------------------
+
+Page 10 (section 1.3.3):
+The function lowest_block() as given does not preserve
+the highest bit of the block if it is the highest bit
+of the argument x.  The following code fixes this:
+
+static inline ulong lowest_block(ulong x)
+{
+    ulong l = x & -x;  // lowest bit
+    ulong y = x + l;
+    y ^= x;
+    return  y & x;
+}
+
+The last two lines of code have been changed.
+[Reported 20-October-2010 by Mike Engber]
+
+------------------------------------------------------------
+
+Page 14 (section 1.5.2):
+The comment
+// multiplication by a power of 2 is a shift
+on line 4 of the function  db_lowest_one_idx(ulong x)
+shall not indicate that the compiler emits just a shift.
+
+------------------------------------------------------------
+
+Page 18 (section 1.7):
+For arguments 0 and 1 (either order)
+ld_eq(x,y) correctly returns false
+whereas ld(x) == ld(y) gives true
+(because ld(x) returns 0 for both x==1 and x==0).
+
+------------------------------------------------------------
+
+Page 58 (section 1.22):
+Code for the conversion from and to the complex base (-1+i)
+has been added to the FXT library, (fxt/src/bits/radix-m1pi.h),
+the corresponding demo programs are fxt/demo/bits/radix-m1pi-demo.cc
+and fxt/demo/bits/radix-m1pi-to-z-demo.cc
+The routines use conversion from and to radix (-4), see
+fxt/src/bits/radix-m4.h and fxt/demo/bits/radix-m4-demo.cc
+
+Code for the conversion from and to the complex base (2*i)
+(the quarter-imaginary base) has been added to the FXT library,
+see fxt/src/bits/radix-2i.h, the corresponding demo programs are
+fxt/demo/bits/radix-2i-demo.cc and fxt/demo/bits/radix-2i-to-z-demo.cc
+
+------------------------------------------------------------
+
+Page 83 (section 1.31.1):
+An algorithm for the generation of n-dimensional Hilbert curves,
+given by Fred Lunnon, is implemented in the class in
+  fxt/src/comb/hilbert-ndim.h
+The corresponding program showing usage of the class is
+  fxt/demo/comb/hilbert-ndim-demo.cc
+
+------------------------------------------------------------
+
+Page 106 (section 2.3.1):
+The code for inverting a permutation without an extra
+bit-array is given in the program
+ fxt/demo/perm/perm-invert-notag-demo.cc
+
+------------------------------------------------------------
+
+Page 124 (section 2.9):
+In the procedures rotate_left() and rotate_right(),
+replace the code before the calls to reverse() by
+    if ( n<=1 )  return;  // nothing to do
+    if ( s>=n )  s %= n;
+    if ( s==0 )  return;  // nothing to do
+
+------------------------------------------------------------
+
+Page 152 (section 3.5.3):
+The first sentence should read
+"They can be computed ..."
+(the y is missing in the first word).
+
+------------------------------------------------------------
+
+Page 165 (section 4.6):
+In code line 10, near top of page, the comment
+    // (ones are at the positions of the _unused_ bits)
+should be
+    // (ones are at the positions of the used bits)
+
+------------------------------------------------------------
+
+Page 166 (section 4.6):
+In the last sentence just before section 4.7
+replace "out of bounds" by "out of bound accesses".
+
+------------------------------------------------------------
+
+Page 197 (section 7.2):
+In the method next() replace
+        if ( j==k_ )  return k_;  // current composition is last
+by
+        if ( j >= k_ - 1 )  return k_;  // current composition is last
+(otherwise the sentinel is changed with the final call to next()
+which however does usually not matter).
+
+------------------------------------------------------------
+
+Page 243 (section 11.3):
+A generator for permutations in lexicographic order
+that also computes the inverse permutations is given in
+ fxt/src/comb/perm-lex-inv.h
+The corresponding demo program is fxt/demo/comb/perm-lex-inv-demo.cc
+
+------------------------------------------------------------
+
+Page 273 (section 10.12):
+In the list on top of the page, replace
+ j%1 by j%2 (twice).
+
+------------------------------------------------------------
+
+Page 295 (section 13.1):
+The demo program fxt/demo/comb/mset-ksubset-demo.cc for the
+generation of k-subsets of a multiset has been
+added to the FXT library.
+
+------------------------------------------------------------
+
+Page 295 (section 13.2):
+In the last sentence on this page ("Relation 13.2-1a is obtained ...")
+insert a comma after the first occurrence of the word "elements".
+
+------------------------------------------------------------
+
+Page 301 (section 13.2.4):
+A permutation generator using only prefix shifts
+(specialization of the multiset permutations in cool-lex order)
+has been added to the FXT library (fxt/src/comb/perm-pref.h),
+the corresponding demo program is fxt/demo/comb/perm-pref-demo.cc
+
+------------------------------------------------------------
+
+Page 314 (section 14.6.2):
+Equation (14.6-2) needs to be
+  p_r(n) = r * p_r(n-1) + p_r(n-2)
+
+------------------------------------------------------------
+
+Page 317 (section 14.8):
+In equation (14.8-1) all expressions on the left but the first
+need to have argument n-2 (not n-1 as given):
+
+  D_r(n) =
+    [  0 . D_r(n-1) ]
+    [ 10 . D_r(n-2) ]
+    [ 20 . D_r(n-2) ]
+    [ 30 . D_r(n-2) ]
+      etc.
+
+------------------------------------------------------------
+
+Page 333 (section 15.5):
+The two algorithms for generation Dyck words by prefix shifts given in
+  Stephane Durocher, Pak Ching Li, Debajyoti Mondal, Aaron Williams:
+  Ranking and Loopless Generation of k-ary Dyck Words in Cool-lex Order,
+  The 22nd International Workshop on Combinatorial Algorithms,
+  Victoria, Canada, IWOCA, (2011).
+
+Are implemented in fxt/src/comb/dyck-pref.h and
+fxt/src/comb/dyck-pref2.h
+
+The corresponding demo programs are fxt/demo/comb/dyck-pref-demo.cc
+and fxt/demo/comb/dyck-pref2-demo.cc
+
+------------------------------------------------------------
+
+Page 346 (section 16.4.1):
+In relation (16.4-14) both products in the denominator
+range from 1 to n (not from 0 to n-1 as shown).
+
+------------------------------------------------------------
+
+Page 348 (section 16.4.2):
+For the number of partitions into parts >= L whose
+generating function obviously is G = prod(n>=L, (1+x^n) )
+the following two expressions can be given:
+  G = sum(n>=0, x^(n*(n+1)/2+n*(L-1)) / prod(k=1..n, 1-x^k) )
+  G = sum(n>=L-1, x^(n*(n+1)/2-L*(L-1)/2) / prod(k=1..n-(L-1), 1-x^k) )
+
+------------------------------------------------------------
+
+Page 350 (section 16.4.2):
+Another identity for the partitions into parts r mod m (r!=0)
+(cf. relation (16.4-38)) can be given as follows:
+  1/prod(n>=0, 1-x^(m*n+r) ) =
+  sum(n>=0, x^(r*n)/prod(k=1..n, 1-x^(m*k) ) )
+
+In relation (16.4-39), the lower limit for the products
+on the right needs to be k=1 (not k=0 as given):
+  prod(n>=0, 1+x^(m*n+r) )  =
+  sum(n>=0, x^((m*n^2+(2*r-m)*n)/2) / prod(k=1..n, 1-x^(m*k)) )
+
+------------------------------------------------------------
+
+Page 368 (section 17.3.5):
+In the table of numbers of F-increment RGSs
+n should start with 1 (not 0, as given).
+
+------------------------------------------------------------
+
+Page 417 (section 21.2.3):
+In the first line the formula
+  exp(i x) = sin(x) + i cos(x)
+should be (swap sin and cos)
+  exp(i x) = cos(x) + i sin(x)
+[Reported 2-November-2010 by Mani Zandifar]
+
+------------------------------------------------------------
+
+Page 437 (section 21.9.1):
+In the arguments of both exponential functions in relation (21.9-4)
+the factor 2*Pi*i is missing.
+
+------------------------------------------------------------
+
+Page 446 (section 22.2.2):
+In relations (22.2-3) and (22.2-4) drop the subscript Tau.
+
+------------------------------------------------------------
+
+Page 478 (section 23.7.2):
+The routine grs_negate() is defined as
+
+template <typename Type>
+void grs_negate(Type *f, ulong n)
+// Negate elements at indices where the Golay-Rudin-Shapiro is negative.
+{
+    for (ulong k=0; k<n; ++k)
+    {
+        ulong gnq  =  parity( k & (k>>1) );  // == grs_negative_q(k)
+        if ( gnq )  f[k] = -f[k];
+    }
+}
+
+It is given in fxt/src/walsh/grsnegate.h
+
+------------------------------------------------------------
+
+Page 575 (section 29.3.4):
+Relation (29.3-19) is incorrect and should be removed.
+
+------------------------------------------------------------
+
+Page 589 (section 30.2.1):
+In relation (30.2-12) replace f(x) by A(x).
+
+------------------------------------------------------------
+
+Page 603 (section 31.2.2):
+The last expression for E in relation (31.2-17b)
+must be negated.
+
+------------------------------------------------------------
+
+Page 608 (section 31.3.3):
+In relation (31.3-29h) the q in the denominator on the
+right side needs to be q^4.
+
+------------------------------------------------------------
+
+Page 675 (section 35.1.6.3):
+In the idenity "... we have h(x) = sum_{k}{1 - r_k x_k} ..."
+in the last sentence of the page drop the subscript k of x.
+
+------------------------------------------------------------
+
+Page 709 (section 37.1.3):
+The power series given by relation (37.1-32) can
+be computed efficiently as
+  sum(k>=1, x^(k^2) * a^k * ( 1/(1-x^k) + a*x^k/(1-a*x^k) ) )
+See https://oeis.org/A079586 for an application of this
+method to compute the sum of the inverse Fibonacci numbers.
+
+------------------------------------------------------------
+
+Page 712 (section 37.2.3):
+In the last expression in relation (37.2-15a)
+replace  x^k/n  by  x^k/k
+
+The identity, written as
+  exp(sum(n>=1, sigma(n)/n * x^n) = 1/eta(x)
+where sigma(n) denotes the sum of divisors of n
+can be generalised as follows:
+  exp(sum(n>=1, sigma(s*n)/n * x^n) =
+  prod(d divides s, eta(x^d)^(-moebius(d)*sigma(s/d)) )
+
+------------------------------------------------------------
+
+Page 715 (section 37.2.4):
+A very large collection of identities like relation (37.2-24a)
+is given by Michael Somos at  http://eta.math.georgetown.edu/
+
+------------------------------------------------------------
+
+Page 850 (section 40.9.2):
+Clause (3) of Swan's theorem has to be
+n is odd, k is even and ...
+
+------------------------------------------------------------
+
+Page 855 (section 40.9.13):
+In the last sentence of the page,
+replace "primitve" by "primitive".
+
+------------------------------------------------------------
+
+Page 885 (section 41.9.1):
+The sequence of numbers n such that a length-n CLHCA
+of maximal period exists is A194125 of the OEIS, see
+  https://oeis.org/A194125
+
+------------------------------------------------------------
+
+Page 887 (section 42.1.3):
+The first sentence
+ "The trace of an element u ..."
+should read
+ "The trace of an element a ..."
+[Reported 24-December-2012 by Marc Delvaux]
+
+------------------------------------------------------------
+
+Page 907 (section 42.6.3.5):
+Just after relation (42.6-12), insert "for" where it belongs:
+"... works [for] all odd n:"
+
+------------------------------------------------------------
+
+Page 919 (section 42.9.2.2):
+In step (5.b) of the algorithm, replace F_{i-1} by F_{k-1}.
+
+------------------------------------------------------------
+
+Bibliography:
+
+Page 932: Item [31] by David H. Bailey et. al. is available at
+  http://www.emis.de/journals/EM/expmath/volumes/10/10.html
+  (the given link became invalid: as the domain expmath.org
+   has been hijacked by a spammer.)
+
+Page 933: Item [46] by E. R. Berlekamp is available at
+  http://www.alcatel-lucent.com/bstj/vol46-1967/bstj-vol46-issue08.html
+
+Page 935: Item [46] by Dany Breslauer and Devdatt P. Dubhashi
+  is now available at  http://www.brics.dk/LS/95/4/
+
+Page 936: Item [106] by Mathieu Ciet et. al. is available at
+  http://www.uclouvain.be/crypto/publications/year/2002
+  (the given link became invalid)
+
+Page 937: Item [111] by Henri Cohen et. al. is available at
+  http://www.emis.de/journals/EM/expmath/volumes/9/9.html
+  (the given link became invalid: as the domain expmath.org
+   has been hijacked by a spammer.)
+
+Page 938: Item [134] by Peter Eades and Brendan McKay is available at
+  http://cs.anu.edu.au/~bdm/publications.html
+
+Page 945: Item [248] by Igor Pak is available at
+  http://www.combinatorics.org/issue/view/Surveys
+  (the link given became invalid).
+
+Page 945: Item [265] by Igor Pak is now available at
+  http://www.math.ucla.edu/~pak/papers/research.htm#par
+  (the given link became invalid)
+
+Page 948: Item [322] by Damien Stehle and Paul Zimmermann
+is available at  http://hal.inria.fr/LORIA/inria-00071533
+
+Page 949: Item [338] by Vincent Vajnovszki and Timothy Walsh,
+and items [342] and [343] by Timothy Walsh are available at
+  http://www.info2.uqam.ca/~walsh_t/pages/papers.html
+
+Page 950: Item [361] by Hugh C. Williams is titled
+ "\'{E}douard Lucas and primality testing"
+(not "\'{E}duard ..." as given, where the letter o is missing).
+
+Page 950: Item [368] by Neal Zierler is available at
+  http://www.ams.org/journals/proc/1958-009-02/S0002-9939-1958-0094332-2/
+
+
+------------------------------------------------------------
+End of file.
+------------------------------------------------------------

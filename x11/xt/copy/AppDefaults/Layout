@@ -1,0 +1,6 @@
+*button*labelString: Delete\n\
+All\n\
+Text
+*button1*labelString: Save
+*button2*labelString: Revert
+

@@ -1,0 +1,27 @@
+#!/usr/bin/perl
+# Convert list of hex numbers into binary
+for ($i = 0; $i < @ARGV; $i++) {
+
+$val = hex($ARGV[$i]);
+$h = b2h($ARGV[$i]);
+
+printf("%x = 0x$h\n", $val, $val);
+}
+
+sub b2h {
+    my $num   = shift;
+    my $WIDTH = 32;
+    my $index = length($num) - $WIDTH;
+    my $hex = '';
+    do {
+        my $width = $WIDTH;
+        if ($index < 0) {
+            $width += $index;
+            $index = 0;
+        }
+        my $cut_string = substr($num, $index, $width);
+        $hex = sprintf('%x', oct("0b$cut_string")) . $hex;
+        $index -= $WIDTH;
+    } while ($index > (-1 * $WIDTH));
+    return $hex;
+}

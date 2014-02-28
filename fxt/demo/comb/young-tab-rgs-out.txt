@@ -1,0 +1,46 @@
+// output of ./demo/comb/young-tab-rgs-demo.cc:
+// Description:
+//% Restricted growth strings (RGS) for standard Young tableaux in lexicographic order.
+//% Cf. OEIS sequences A000085 (all tableaux),
+//%   A001405 (tableaux with height <= 2, central binomial coefficients)
+//%   A001006 (tableaux with height <= 3, Motzkin numbers)
+//%   A005817 (height <= 4),  A049401 (height <= 5),  A007579 (height <= 6)
+//%   A007578 (height <= 7),  A007580 (height <= 8)
+//%   A001189 (height <= n-1)
+//%   A014495 (height = 2),  A217323 (height = 3),  A217324 (height = 4),
+//%   A217325 (height = 5),  A217326 (height = 6),  A217327 (height = 7),
+//%   A217328 (height = 8).
+//% Cf. OEIS sequences A061343 (all shifted tableaux; using condition is_shifted(1)):
+//% A210736 (height <= 2), A082395 (height <= 3).
+
+arg 1: 5 == n  [Length of strings]  default=5
+arg 2: 0 == m  [Number of allowed values for digits
+         == max height of tableaux, 0 ==> all]  default=0
+arg 3: 0 == tq  [Whether do draw tableaux (as ASCII art)]  default=0
+   1:    [ . . . . . ]  0   [ 5 . . . . ]  1
+   2:    [ . . . . 1 ]  4   [ 4 1 . . . ]  2
+   3:    [ . . . 1 . ]  3   [ 4 1 . . . ]  2
+   4:    [ . . . 1 1 ]  4   [ 3 2 . . . ]  2
+   5:    [ . . . 1 2 ]  4   [ 3 1 1 . . ]  3
+   6:    [ . . 1 . . ]  2   [ 4 1 . . . ]  2
+   7:    [ . . 1 . 1 ]  4   [ 3 2 . . . ]  2
+   8:    [ . . 1 . 2 ]  4   [ 3 1 1 . . ]  3
+   9:    [ . . 1 1 . ]  3   [ 3 2 . . . ]  2
+  10:    [ . . 1 1 2 ]  4   [ 2 2 1 . . ]  3
+  11:    [ . . 1 2 . ]  3   [ 3 1 1 . . ]  3
+  12:    [ . . 1 2 1 ]  4   [ 2 2 1 . . ]  3
+  13:    [ . . 1 2 3 ]  4   [ 2 1 1 1 . ]  4
+  14:    [ . 1 . . . ]  1   [ 4 1 . . . ]  2
+  15:    [ . 1 . . 1 ]  4   [ 3 2 . . . ]  2
+  16:    [ . 1 . . 2 ]  4   [ 3 1 1 . . ]  3
+  17:    [ . 1 . 1 . ]  3   [ 3 2 . . . ]  2
+  18:    [ . 1 . 1 2 ]  4   [ 2 2 1 . . ]  3
+  19:    [ . 1 . 2 . ]  3   [ 3 1 1 . . ]  3
+  20:    [ . 1 . 2 1 ]  4   [ 2 2 1 . . ]  3
+  21:    [ . 1 . 2 3 ]  4   [ 2 1 1 1 . ]  4
+  22:    [ . 1 2 . . ]  2   [ 3 1 1 . . ]  3
+  23:    [ . 1 2 . 1 ]  4   [ 2 2 1 . . ]  3
+  24:    [ . 1 2 . 3 ]  4   [ 2 1 1 1 . ]  4
+  25:    [ . 1 2 3 . ]  3   [ 2 1 1 1 . ]  4
+  26:    [ . 1 2 3 4 ]  4   [ 1 1 1 1 1 ]  5
+ ct=26

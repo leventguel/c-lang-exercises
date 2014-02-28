@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+  long eax=1,ebx=2;
+
+  __asm__ __volatile__ ("add %0,%2"
+			: "=b"((long)ebx)
+			: "a"((long)eax), "q"((long)ebx)
+			: "2"
+			);
+  printf("ebx=%x\n", (unsigned int)ebx);
+  return 0;
+}
+

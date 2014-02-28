@@ -1,0 +1,281 @@
+for d in lib  ch2 ch3 ch4 ch5 ch6 ch7 ch8 ch9 ch10 ch11 ch12 ch13 ch14 ch15 ch16 ch17; do \
+cd $d;  echo `pwd`; make; cd ..; \
+done
+/home/wbooze/prg/c/x11/xt/young/lib
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/lib'
+cc -O    -c -o MenuSupport.o MenuSupport.c
+cc -O    -c -o help.o help.c
+help.c: In Funktion »ContextHelpCallback«:
+help.c:36:28: Warnung: Initialisierung erzeugt Ganzzahl von Zeiger ohne Typkonvertierung
+cc -O    -c -o pipe.o pipe.c
+cc -O    -c -o wprintf.o wprintf.c
+wprintf.c: In Funktion »wprintf«:
+wprintf.c:59:12: Warnung: Zuweisung streicht Qualifizierer von Zeiger-Zieltyp
+cc -O    -c -o textFromXmString.o textFromXmString.c
+cc -O    -c -o dbg.o dbg.c
+ar ruv libXs.a MenuSupport.o help.o pipe.o wprintf.o textFromXmString.o dbg.o
+ar: creating libXs.a
+a - MenuSupport.o
+a - help.o
+a - pipe.o
+a - wprintf.o
+a - textFromXmString.o
+a - dbg.o
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/lib'
+/home/wbooze/prg/c/x11/xt/young/ch2
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch2'
+cc -O    -c -o memo.o memo.c
+cc -O  -o memo memo.o -lXm -lXt -lX11
+cc -O    -c -o memo2.o memo2.c
+cc -O  -o memo2 memo2.o -lXm -lXt -lX11
+cc -O    -c -o xecute.o xecute.c
+cc -O  -o xecute xecute.o -lXm -lXt -lX11
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch2'
+/home/wbooze/prg/c/x11/xt/young/ch3
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch3'
+cd ../lib; make
+make[2]: Entering directory `/mnt/hd/prg/c/x11/xt/young/lib'
+make[2]: Für das Ziel »all« ist nichts zu tun.
+make[2]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/lib'
+cc -O  -I../lib   -c -o editor.o editor.c
+cc -O  -I../lib -o editor editor.o -L../lib -lXm -lXt -lX11
+cc -O  -I../lib   -c -o rmtest.o rmtest.c
+cc -O  -I../lib -o rmtest rmtest.o -L../lib -lXm -lXt -lX11
+cc -O  -I../lib   -c -o rmtest2.o rmtest2.c
+cc -O  -I../lib -o rmtest2 rmtest2.o -L../lib -lXm -lXt -lX11
+cc -O  -I../lib   -c -o rmtest3.o rmtest3.c
+rmtest3.c:29:3: Warnung: Typkonvertierung von Zeiger auf Ganzzahl anderer Breite
+rmtest3.c:29:3: Fehler: Initialisierungselement ist nicht konstant
+rmtest3.c:29:3: Fehler: (nahe der Initialisierung für »resources[0].resource_offset«)
+make[1]: *** [rmtest3.o] Fehler 1
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch3'
+/home/wbooze/prg/c/x11/xt/young/ch4
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch4'
+cc -O    -c -o chooseone.o chooseone.c
+cc -O  -o chooseone chooseone.o -lXm -lXt -lX11
+cc -O    -c -o label.o label.c
+cc -O  -o label label.o -lXm -lXt -lX11
+cc -O    -c -o pushbutton.o pushbutton.c
+cc -O  -o pushbutton pushbutton.o -lXm -lXt -lX11
+cc -O    -c -o driver.o driver.c
+cc -O    -c -o inputfield.o inputfield.c
+cc -O  -o input driver.o inputfield.o -lXm -lXt -lX11
+cc -O    -c -o numeric.o numeric.c
+cc -O  -o numeric driver.o numeric.o -lXm -lXt -lX11
+cc -O    -c -o driver2.o driver2.c
+cc -O    -c -o password.o password.c
+password.c:25:14: Fehler: »index« als andere Symbolart redeklariert
+make[1]: *** [password.o] Fehler 1
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch4'
+/home/wbooze/prg/c/x11/xt/young/ch5
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch5'
+cc -O    -c -o explicit.o explicit.c
+cc -O  -o explicit explicit.o -lXm -lXt -lX11
+cc -O    -c -o formtest.o formtest.c
+cc -O  -o formtest formtest.o -lXm -lXt -lX11
+cc -O    -c -o formtest2.o formtest2.c
+cc -O  -o formtest2 formtest2.o -lXm -lXt -lX11
+cc -O    -c -o layout.o layout.c
+cc -O  -o layout layout.o -lXm -lXt -lX11
+cc -O    -c -o frame.o frame.c
+cc -O  -o frame frame.o -lXm -lXt -lX11
+cc -O    -c -o pane.o pane.c
+cc -O  -o pane pane.o -lXm -lXt -lX11
+cc -O    -c -o mainwindow.o mainwindow.c
+cc -O  -o mainwindow mainwindow.o -lXm -lXt -lX11
+cc -O    -c -o radiobox.o radiobox.c
+cc -O  -o radiobox radiobox.o -lXm -lXt -lX11
+cc -O    -c -o rctest.o rctest.c
+cc -O  -o rctest rctest.o -lXm -lXt -lX11
+cc -O    -c -o scale.o scale.c
+cc -O  -o scale scale.o -lXm -lXt -lX11
+cc -O    -c -o scroll.o scroll.c
+cc -O  -o scroll scroll.o -lXm -lXt -lX11
+cc -O    -c -o traverse.o traverse.c
+cc -O  -o traverse traverse.o -lXm -lXt -lX11
+cc -O    -c -o twoshells.o twoshells.c
+cc -O  -o twoshells twoshells.o -lXm -lXt -lX11
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch5'
+/home/wbooze/prg/c/x11/xt/young/ch6
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch6'
+cd ../lib; make
+make[2]: Entering directory `/mnt/hd/prg/c/x11/xt/young/lib'
+make[2]: Für das Ziel »all« ist nichts zu tun.
+make[2]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/lib'
+cc -O  -I../lib   -c -o helpdemo.o helpdemo.c
+cc -O  -I../lib -o helpdemo helpdemo.o -L../lib -lXs -lXm -lXt -lX11
+cc -O  -I../lib   -c -o menubar.o menubar.c
+cc -O  -I../lib -o menubar menubar.o -L../lib -lXs -lXm -lXt -lX11
+cc -O  -I../lib   -c -o option.o option.c
+cc -O  -I../lib -o option option.o -L../lib -lXs -lXm -lXt -lX11
+cc -O  -I../lib   -c -o option2.o option2.c
+cc -O  -I../lib -o option2 option2.o -L../lib -lXs -lXm -lXt -lX11
+cc -O  -I../lib   -c -o popupmenu.o popupmenu.c
+cc -O  -I../lib -o popupmenu popupmenu.o -L../lib -lXs -lXm -lXt -lX11
+cc -O  -I../lib   -c -o cascade.o cascade.c
+cc -O  -I../lib -o cascade cascade.o -L../lib -lXs -lXm -lXt -lX11
+cc -O  -I../lib   -c -o tearoff.o tearoff.c
+cc -O  -I../lib -o tearoff tearoff.o -L../lib -lXs -lXm -lXt -lX11
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch6'
+/home/wbooze/prg/c/x11/xt/young/ch7
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch7'
+cd ../lib; make
+make[2]: Entering directory `/mnt/hd/prg/c/x11/xt/young/lib'
+make[2]: Für das Ziel »all« ist nichts zu tun.
+make[2]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/lib'
+cc -O    -c -o customdialog.o customdialog.c
+cc -O  -o customdialog customdialog.o -L../lib -lXm -lXt -lX11
+cc -O    -c -o customdialog2.o customdialog2.c
+cc -O  -o customdialog2 customdialog2.o -L../lib -lXm -lXt -lX11
+cc -O    -c -o customdialog3.o customdialog3.c
+cc -O  -o customdialog3 customdialog3.o -L../lib -lXm -lXt -lX11
+cc -O    -c -o dialogdemo.o dialogdemo.c
+cc -O  -o dialogdemo dialogdemo.o -L../lib -lXm -lXt -lX11
+cc -O    -c -o dialogdemo2.o dialogdemo2.c
+cc -O  -o dialogdemo2 dialogdemo2.o -L../lib -lXm -lXt -lX11
+cc -O    -c -o filedemo.o filedemo.c
+cc -O  -o filedemo filedemo.o -L../lib -lXm -lXt -lX11
+cc -O    -c -o xecute.o xecute.c
+cc -O  -o xecute xecute.o -L../lib -lXm -lXt -lX11
+cc -O    -c -o askquestion.o askquestion.c
+askquestion.c: In Funktion »AskQuestionCallback«:
+askquestion.c:111:8: Warnung: Unverträgliche implizite Deklaration der eingebauten Funktion »exit«
+cc -O  -o askquestion askquestion.o -L../lib -lXm -lXt -lX11
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch7'
+/home/wbooze/prg/c/x11/xt/young/ch8
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch8'
+cd ../lib; make
+make[2]: Entering directory `/mnt/hd/prg/c/x11/xt/young/lib'
+make[2]: Für das Ziel »all« ist nichts zu tun.
+make[2]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/lib'
+cc -O    -c -o busy.o busy.c
+busy.c: In Funktion »DisplayBusyCursor«:
+busy.c:65:21: Warnung: Initialisierung erzeugt Ganzzahl von Zeiger ohne Typkonvertierung
+cc -O  -o busy busy.o -L../lib -lXm -lXt -lX11
+cc -O    -c -o xbc.o xbc.c
+cc -O    -c -o calc.o calc.c
+cc -O  -o xbc xbc.o calc.o -L../lib -lXm -lXt -lX11
+calc.o: In function `CreateCalculator':
+calc.c:(.text+0x419): undefined reference to `SetUpTwoWayPipe'
+collect2: ld gab 1 als Ende-Status zurück
+make[1]: *** [xbc] Fehler 1
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch8'
+/home/wbooze/prg/c/x11/xt/young/ch9
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch9'
+cd ../lib; make
+make[2]: Entering directory `/mnt/hd/prg/c/x11/xt/young/lib'
+make[2]: Für das Ziel »all« ist nichts zu tun.
+make[2]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/lib'
+cc -O    -c -o coloredit.o coloredit.c
+cc -O    -c -o paletteEditor.o paletteEditor.c
+cc -O  -o coloredit  coloredit.o paletteEditor.o  -L../lib -lXm -lXt -lX11
+cc -O    -c -o getpixel.o getpixel.c
+getpixel.c: In Funktion »main«:
+getpixel.c:55:5: Warnung: Unverträgliche implizite Deklaration der eingebauten Funktion »printf«
+cc -O  -o getpixel  getpixel.o  -L../lib -lXm -lXt -lX11
+cc -O    -c -o getpixelbyname.o getpixelbyname.c
+getpixelbyname.c: In Funktion »main«:
+getpixelbyname.c:46:5: Warnung: Unverträgliche implizite Deklaration der eingebauten Funktion »printf«
+cc -O  -o getpixelbyname  getpixelbyname.o  -L../lib -lXm -lXt -lX11
+cc -O    -c -o loadrgb.o loadrgb.c
+loadrgb.c: In Funktion »main«:
+loadrgb.c:79:5: Warnung: Unverträgliche implizite Deklaration der eingebauten Funktion »printf«
+cc -O  -o loadrgb  loadrgb.o  -L../lib -lXm -lXt -lX11
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch9'
+/home/wbooze/prg/c/x11/xt/young/ch10
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch10'
+cc -O    -c -o intersect.o intersect.c
+intersect.c: In Funktion »main«:
+intersect.c:60:5: Warnung: Unverträgliche implizite Deklaration der eingebauten Funktion »printf«
+cc -O  -o intersect  intersect.o  -lXm -lXt -lX11
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch10'
+/home/wbooze/prg/c/x11/xt/young/ch11
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch11'
+cd ../lib; make
+make[2]: Entering directory `/mnt/hd/prg/c/x11/xt/young/lib'
+make[2]: Für das Ziel »all« ist nichts zu tun.
+make[2]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/lib'
+cc -O    -c -o xlogo.o xlogo.c
+cc -O  -o xlogo  xlogo.o  -L../lib -lXpm -lXm -lXt -lX11
+cc -O    -c -o xlogo2.o xlogo2.c
+cc -O  -o xlogo2  xlogo2.o  -L../lib -lXpm -lXm -lXt -lX11
+cc -O    -c -o xlogo3.o xlogo3.c
+cc -O  -o xlogo3  xlogo3.o  -L../lib -lXpm -lXm -lXt -lX11
+cc -O    -c -o xpmlogo.o xpmlogo.c
+cc -O  -o xpmlogo  xpmlogo.o  -L../lib -lXpm -lXm -lXt -lX11
+cc -O    -c -o xpmlogo2.o xpmlogo2.c
+cc -O  -o xpmlogo2  xpmlogo2.o  -L../lib -lXpm -lXm -lXt -lX11
+cc -O    -c -o pixmapbrowser.o pixmapbrowser.c
+cc -O    -c -o browser.o browser.c
+cc -O  -o pixmaps  pixmapbrowser.o browser.o  -L../lib -lXpm -lXm -lXt -lX11
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch11'
+/home/wbooze/prg/c/x11/xt/young/ch12
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch12'
+cd ../lib; make
+make[2]: Entering directory `/mnt/hd/prg/c/x11/xt/young/lib'
+make[2]: Für das Ziel »all« ist nichts zu tun.
+make[2]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/lib'
+cc -O    -c -o pixlabel.o pixlabel.c
+cc -O  -o pixlabel  pixlabel.o  -L../lib -lXpm -lXm -lXt -lX11
+cc -O    -c -o list.o list.c
+cc -O  -o list  list.o  -L../lib -lXpm -lXm -lXt -lX11
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch12'
+/home/wbooze/prg/c/x11/xt/young/ch13
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch13'
+cd ../lib; make
+make[2]: Entering directory `/mnt/hd/prg/c/x11/xt/young/lib'
+make[2]: Für das Ziel »all« ist nichts zu tun.
+make[2]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/lib'
+cc -O -I../lib   -c -o fractal.o fractal.c
+fractal.c:58:3: Fehler: incompatible types when initializing type »enum _menu_type« using type »void *«
+fractal.c:63:3: Fehler: incompatible types when initializing type »enum _menu_type« using type »void *«
+fractal.c: In Funktion »InitData«:
+fractal.c:159:29: Warnung: Übergabe des Arguments 3 von »XCreateGC«  erzeugt Ganzzahl von Zeiger ohne Typkonvertierung
+/usr/include/X11/Xlib.h:1592:11: Anmerkung: expected »long unsigned int« but argument is of type »void *«
+fractal.c:164:19: Warnung: Zuweisung erzeugt Ganzzahl von Zeiger ohne Typkonvertierung
+fractal.c: In Funktion »SetupColorMap«:
+fractal.c:354:29: Warnung: Initialisierung erzeugt Ganzzahl von Zeiger ohne Typkonvertierung
+make[1]: *** [fractal.o] Fehler 1
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch13'
+/home/wbooze/prg/c/x11/xt/young/ch14
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch14'
+cd ../lib; make
+make[2]: Entering directory `/mnt/hd/prg/c/x11/xt/young/lib'
+make[2]: Für das Ziel »all« ist nichts zu tun.
+make[2]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/lib'
+cc -O  -I../lib   -c -o selectiondemo.o selectiondemo.c
+selectiondemo.c:74:3: Fehler: incompatible types when initializing type »enum _menu_type« using type »void *«
+selectiondemo.c:81:3: Fehler: incompatible types when initializing type »enum _menu_type« using type »void *«
+selectiondemo.c:87:3: Fehler: incompatible types when initializing type »enum _menu_type« using type »void *«
+make[1]: *** [selectiondemo.o] Fehler 1
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch14'
+/home/wbooze/prg/c/x11/xt/young/ch15
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch15'
+cc -O    -c -o dialtest.o dialtest.c
+In file included from dialtest.c:22:0:
+Dial.h:37:0: Warnung: »XmNposition« redefiniert
+/usr/include/Xm/XmStrDefs.h:3284:0: Anmerkung: dies ist die Stelle der vorherigen Definition
+cc -O    -c -o Dial.o Dial.c
+In file included from DialP.h:25:0,
+                 from Dial.c:22:
+Dial.h:37:0: Warnung: »XmNposition« redefiniert
+/usr/include/Xm/XmStrDefs.h:3284:0: Anmerkung: dies ist die Stelle der vorherigen Definition
+Dial.c:55:13: Fehler: In Konflikt stehende Typen für »_XmDrawShadows«
+/usr/include/Xm/DrawP.h:133:25: Anmerkung: Vorherige Deklaration von »_XmDrawShadows« war hier
+make[1]: *** [Dial.o] Fehler 1
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch15'
+/home/wbooze/prg/c/x11/xt/young/ch16
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch16'
+cc -O    -c -o rowtest.o rowtest.c
+cc -O    -c -o Row.o Row.c
+cc -O  -o rowtest rowtest.o Row.o -lXm -lXt -lX11
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch16'
+/home/wbooze/prg/c/x11/xt/young/ch17
+make[1]: Entering directory `/mnt/hd/prg/c/x11/xt/young/ch17'
+cc -O    -c -o tree.o tree.c
+cc -O    -c -o Tree.o Tree.c
+Tree.c:147:5: Warnung: Initialisierung erzeugt Ganzzahl von Zeiger ohne Typkonvertierung
+cc -O  -o tree tree.o Tree.o -lXm -lXt -lX11
+cc -O    -c -o sort.o sort.c
+cc -O  -o sort sort.o Tree.o -lXm -lXt -lX11
+make[1]: Leaving directory `/mnt/hd/prg/c/x11/xt/young/ch17'

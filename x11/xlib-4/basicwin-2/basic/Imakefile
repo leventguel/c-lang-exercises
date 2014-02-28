@@ -1,0 +1,25 @@
+#
+# example programs Imakefile
+#
+#
+
+#define PassCDebugFlags 'CDEBUGFLAGS=$(CDEBUGFLAGS)'
+
+SRCS1=	basicwin.c 
+OBJS1=	basicwin.o
+
+SRCS2= basicwin-3-4.c
+OBJS2= basicwin-3-4.o
+
+SRCS3= basicwin-3-5.c
+OBJS3= basicwin-3-5.o
+
+PROGRAMS = basicwin basicwin-3-4 basicwin-3-5
+
+all::  $(PROGRAMS)
+
+LOCAL_LIBRARIES = $(XLIB)
+
+NormalProgramTarget(basicwin,$(OBJS1),,$(LOCAL_LIBRARIES),)
+NormalProgramTarget(basicwin-3-4,$(OBJS2),,$(LOCAL_LIBRARIES),)
+NormalProgramTarget(basicwin-3-5,$(OBJS3),,$(LOCAL_LIBRARIES),)

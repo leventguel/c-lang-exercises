@@ -1,0 +1,83 @@
+This file lists known typos and errors that were caught too late to
+make the first printing of the book. Later printings should already
+include these fixes. 
+
+ch3, page 64, line 37 of the editor example should be:
+      XmNorientation, XmHORIZONTAL,
+to achieve the layout shown in figure 3.4
+
+ch5, page 137. Figure 5.6 shows two columns of buttons, while the
+example, as written, produces 1. Set numColumns to 2 to get the
+layout of figure 5.6
+
+ch5, Pg 160, line 56 of the mainwindow example should be:
+XtManageChild(menu);
+Without this, the menu bar does not appear.
+
+ch5, page 163. The example and figure 5.20 are confusing. As written,
+the program looks like figure 5.21 on page 166. To get figure 5.20,
+you would need to change the dimensions of the scale on line 43.
+
+Ch 5, pg 179. Figure 5.30 goes with the following section, not the one
+it is in. Mentally move 5.30 and the preceding sentence to pg 182. :-)
+
+Ch 6, Pg 208. The first line of the submenu description has a "."
+when it should have a "," (comma) separating entries in the menu
+structure.
+
+Ch6, pg 221. helpdemo, line 32 should pass mainWindow as default
+clientData for the ContextHelpCallback.
+
+Ch9, Page 298. The last paragraph is misleading. Not all visual types have
+a default black or white pixel.
+
+Ch9, page 299, in the footnote, "16 * 24" is supposed to be 16*2^4 (4
+should be superscripted.
+
+ch 13, page 439, comment on line 363 has two mispellings, "expect"
+and "permantently"
+
+ch13, pg 442, first paragraph: "...,or erase the previous drawn figure"
+should read "...,to erase the previously drawn figure".
+
+ch14, pg 480. The formal paramter in XmClipboardCopy() should be
+data_id to match the text description.
+
+ch14, pg 488, 489
+"XmNdeleteResponce" should be XmNdeleteResponse
+
+ch14, pg 491. Bannner of setupicon source file says "setupicon.h" It
+should be "setupicon.c".
+
+ch15, pg 537, Dial.h: "fiel" should be "file"
+
+
+ch17, pg. 597, the ContstraintSetValues() method should begin with the
+lines:
+
+  if (!XtIsRectObj (new_w))
+	return (False);    
+
+ch17, pg. 603, the geometry manager should be changed to allow motion
+requests, as follows:
+
+   /*
+     * To allow the Tree widget to change geometries on the fly, becuase
+     * a superNode resource has changed, the Tree widget must allow x,y
+     * requests.
+     */
+    
+    if ( request->request_mode & CWX )
+        w->core.x = request->x;
+    if ( request->request_mode & CWY )
+        w->core.y = request->y;
+
+
+
+
+
+
+
+
+
+

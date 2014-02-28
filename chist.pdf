@@ -1,0 +1,8 @@
+<head><title>Object not found</title></head>
+<body><h1>Object not found</h1>
+The object /cm/cs/who/dmr/chist.pdf does not exist on this server.<p>
+errstr: '/usr/web/cm/cs' does not exist<br>
+uri host: <br>
+header host: cm.bell-labs.com<br>
+actual host: plan9.bell-labs.com
+</body>

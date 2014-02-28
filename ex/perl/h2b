@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+# Convert list of hex numbers into binary
+for ($i = 0; $i < @ARGV; $i++) {
+$val = hex($ARGV[$i]);
+printf("0x%x = %b\n", $val, $val);
+}

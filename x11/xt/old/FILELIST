@@ -1,0 +1,79 @@
+			       EXAMPLE FILES
+
+AppDefaults:
+
+Chooseone     Formedit      Memo          Rctest        Traverse
+Coloredit     Formtest      Menu          Rmtest        Twoshells
+Controldata   Generic       MenuTest      Rowtest       XTalk
+Dialog        Helptest      Notepad       Stopwatch     Xtalk
+
+
+ch2:
+
+Makefile   memo.c     memo1.c    memo2.c    memo3.c    memo4.c    memo5.c
+
+ch3:
+
+Makefile    draw.c      rmtest.c    rmtest2.c   rmtest3*    rmtest3.c
+
+ch4:
+
+Makefile       formedit.c     generic.c      menu2.c        rctest.c
+chooseone.c    formtest.c     helptest.c     menu3.c        traverse.c
+dialog.c       formtest1.c    menu.c         pushbutton.c   twoshells.c
+
+ch5:
+
+Makefile        select.c        tracker1.c      tracker3.c      xclock.c
+mousetracks.c   stopwatch.c     tracker2.c      xbc.c
+
+ch6:
+
+Makefile      coloredit.c   coloredit.h   getpixel.c
+
+ch7:
+
+Makefile   raster.c   xlogo.c    xlogo2.c   xlogo64
+
+ch9:
+
+Makefile         fileview.c       fileview2.c      fileview4.c
+fileview.h       fileview3.c      fileview3.h      fileview5.c
+
+ch10:
+
+Makefile       draw.h         fractal.h      rubberband.c
+draw.c         fractal.c      fractal2.c
+
+ch11:
+
+Makefile        controldata.c   memo.c          notepad.c       xtalk.h
+clipboard.c     data.h          monitordata.c   xtalk.c
+
+ch12:
+
+Dial.c          DialP.h         SquareDial.c    SquareDialP.h   sqdial.c
+Dial.h          Makefile        SquareDial.h    dial.c
+
+ch13:
+
+Makefile    Row.c       Row.h       RowP.h      rowtest.c
+
+ch14:
+
+Makefile   Tree.c     Tree.h     TreeP.h    data       sort.c
+
+lib:
+
+Makefile         invert.c         send_msg.c       wprintf.c
+concat.c         libXs.h          xmstr_to_str.c
+concat.convert   menus.c          str2flt.c        xor.c
+help_dialog.c    pix_buttons.c    strtoxmstr.c
+insert.c         quit.c           talkto.c
+
+
+
+
+
+
+
